@@ -4,6 +4,7 @@ pipeline {
         PRJ="tjkim-jenkinstest-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='python'
     }
+    agent none
     stages {
         stage('create') {
             steps {

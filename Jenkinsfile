@@ -5,7 +5,7 @@ pipeline {
         APP='python'
         GIT_URL='https://github.com/catsy00/jenkins-python-devops'
     }
-    agent none
+    agent any
     stages {
         stage('create') {
             steps {

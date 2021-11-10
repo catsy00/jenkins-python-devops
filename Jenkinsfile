@@ -64,25 +64,5 @@ pipeline {
                 }
             }
         }
-        stage('test') {
-            input {
-                message 'About to test the application'
-                ok 'Ok'
-            }
-            steps {
-                echo "Check that '${env.PRJ}.${env.DOMAIN}' returns HTTP 200"
-                sh "curl -s --fail ${env.PRJ}.${env.DOMAIN}"
-            }
-        }
-    }
-    post {
-        always {
-            script {
-                openshift.withCluster() {
-                    echo("Delete project ${env.PRJ}") 
-                    openshift.delete("project/${env.PRJ}")
-                }
-            }
-        }
     }
 }

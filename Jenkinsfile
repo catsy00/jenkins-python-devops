@@ -3,6 +3,7 @@ pipeline {
         DOMAIN='apps.ocp4.paas.local'
         PRJ="tjkim-jenkinstest-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='python'
+        GIT_URL='https://github.com/catsy00/jenkins-python-devops'
     }
     agent none
     stages {

@@ -5,8 +5,8 @@ pipeline {
         APP='python'
     }
     agent {
-      node {
-        label 'python'
+      dockerfile {
+        filename 'Dockerfile'
       }
     }
     stages {

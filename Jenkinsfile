@@ -4,11 +4,6 @@ pipeline {
         PRJ="tjkim-jenkinstest-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='python'
     }
-    agent {
-      dockerfile {
-        filename 'Dockerfile'
-      }
-    }
     stages {
         stage('create') {
             steps {

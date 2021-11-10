@@ -1,7 +1,7 @@
 pipeline {
     environment {
         DOMAIN='apps.ocp4.paas.local'
-        PRJ="jenkinstest-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
+        PRJ="tjkim-jenkinstest-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='python'
     }
     agent {
